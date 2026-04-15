@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gana Seguidores Gratis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #3a0ca3);
+      color: white;
+      text-align: center;
+      padding: 50px;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(255,255,255,0.08);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      animation: aparecer 1s ease;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .contador {
+      font-size: 22px;
+      margin: 15px 0;
+      color: #00ffcc;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #ff006e;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff4d94;
+      transform: scale(1.08);
+    }
+
+    .fake-log {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🔥 Gana Seguidores GRATIS 🔥</h1>
+    <div class="contador" id="contador">+0 seguidores</div>
+    <p>Conecta tu cuenta y empieza a crecer automáticamente.</p>
+    <button onclick="irInstagram()">Pasos para ganar seguidores</button>
+
+    <div class="fake-log" id="log">
+      Cargando actividad...
+    </div>
+  </div>
+
+  <script>
+    // CONTADOR FALSO
+    let seguidores = 0;
+    setInterval(() => {
+      seguidores += Math.floor(Math.random() * 5) + 1;
+      document.getElementById("contador").innerText = "+" + seguidores + " seguidores";
+    }, 1000);
+
+    // LOG FALSO
+    const nombres = ["Carlos", "Ana", "Luis", "Sofia", "Miguel", "Laura"];
+    setInterval(() => {
+      const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+      document.getElementById("log").innerText = nombre + " acaba de ganar seguidores";
+    }, 2000);
+
+    function irInstagram() {
+      window.location.href = "https://www.instagram.com/menoldolar01/";
+    }
+  </script>
+
+</body>
+</html>
